@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: hsl(222, 26%, 31%);
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 94px 0;  
+}
+
+.container {
+    max-width: 540px;
+}
+
+#display {
+    height: 128px;
+    line-height: 70px;
+    padding: 16px 8px;
+    font-size: 25px;
+    text-align: right;
+    margin-bottom: 20px;
+    background-color: hsl(224, 36%, 15%);
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0px 0px 20px 1px rgb(18, 29, 56);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: hsl(224, 36%, 15%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 1px rgb(23, 31, 56);
+    width: 100%;
+
+}
+
+
+.button {
+    border: .5px solid blue;
+    border-radius: 8px;
+    padding: 10px 25px;
+    text-align: center;
+    font-size: 40px;
+    cursor: pointer;
+    background-color: rgb(224, 214, 214);
+    color: black;
+    margin: 10px;
+    font-weight: 600;
+    border: none;
+    height: 60px;
+    box-shadow: 0px 11px 5px -11px whitesmoke; 
+}
+
+.button:hover {
+    background-color: #5555ff;
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+
+#equal {
+    background-color: red;
+    color: white;
+    box-shadow: 0px 11px 5px -10px red; 
+}
+
+#equal:hover {
+    opacity: .6;
+    transition: .2s ease-in-out;
+}
+
+#del {
+    background-color: rgb(17, 17, 54);
+    color: white;
+    box-shadow: 0px 11px 5px -10px rgb(17, 17, 54);
+}
+
+#del:hover {
+    opacity: .6;
+    transition: .2s ease-in-out;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
