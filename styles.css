@@ -36,6 +36,7 @@ body {
     border-radius: 10px;
     font-weight: 600;
     box-shadow: 0px 0px 20px 1px rgb(18, 29, 56);
+    overflow: hidden;
     transition: all .5s linear;
 }
 
@@ -59,8 +60,8 @@ body {
     text-align: center;
     font-size: 40px;
     cursor: pointer;
-    background-color: rgb(224, 214, 214);
-    color: black;
+    background-color: hsl(30, 25%, 89%);
+    color: hsl(221, 14%, 31%);
     margin: 5px;
     font-weight: 600;
     border: none;
@@ -88,7 +89,8 @@ body {
 #del {
     background-color: rgb(17, 17, 54);
     color: white;
-    box-shadow: 0px 4px 0px rgb(45, 45, 75);}
+    box-shadow: 0px 4px 0px rgb(45, 45, 75);
+}
 
 #del:hover {
     opacity: .6;
@@ -108,3 +110,66 @@ body {
     padding-left: 8px;
 }
 
+.toggle {
+    font-size: 50px;
+}
+
+
+
+
+
+
+/* QUERIES */
+
+/* 600px */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 350px;
+    }
+
+    body {
+        margin: 27px 0;
+        font-weight: 700;
+    }
+
+    #display {
+        height: 88px;
+    }
+
+    .buttons {
+        gap: 17px;
+        padding: 24px;
+    }
+
+    .button {
+        height: 60px;
+        font-size: 27px;
+        margin: 0;
+    }
+
+   
+}
+
+/* 340px */
+@media only screen and (max-width: 340px) {
+        .container {
+        width: calc((100vw) - 30px);
+    }
+
+    body {
+        /* margin: 27px 0; */
+        font-weight: 400;
+    }
+
+    #display {
+        height: 90px;
+        font-size: 38px;
+        padding-top: 15px;
+    }
+
+    .button {
+        height: 50px;
+        padding-bottom: 25px;
+    }
+
+}
