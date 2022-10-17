@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+
+
+
+
+
+
 
 
 * {
@@ -36,7 +42,7 @@ body {
     border-radius: 10px;
     font-weight: 600;
     box-shadow: 0px 0px 20px 1px rgb(18, 29, 56);
-    overflow: hidden;
+    overflow: auto;
     transition: all .5s linear;
 }
 
@@ -110,9 +116,37 @@ body {
     padding-left: 8px;
 }
 
-.toggle {
+/* .toggle {
     font-size: 50px;
+} */
+
+.theme-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+small {
+    padding-right: 20px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.theme-toggle {
+    background-color: inherit;
+    border: 1px solid inherit;
+    border-radius: 15px;
+    background-color: hsl(224, 36%, 15%);
+    color: rgb(216, 59, 59);
+}
+
+.theme-toggle i{
+    padding: 5px 5px;
+    cursor: pointer;
+}
+
+
+
 
 
 
@@ -170,6 +204,11 @@ body {
     .button {
         height: 50px;
         padding-bottom: 25px;
+    }
+
+    .theme-toggle i{
+        padding: 5px 3px;
+        font-size: 10px;
     }
 
 }
