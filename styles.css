@@ -67,12 +67,6 @@ html[data-theme = 'purple'] {
 }
 
 
-
-
-
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -92,10 +86,12 @@ body {
     transition: all .5s linear;
 }
 
+
 .container {
     width: 540px;
     max-width: 540px;
 }
+
 
 #display {
     height: 128px;
@@ -128,7 +124,6 @@ body {
 .button {
     border: var(--button-border);
     border-radius: 8px;
-    /* padding: 10px 25px; */
     padding-top: 15px;
     text-align: center;
     font-size: 40px;
@@ -209,12 +204,16 @@ small {
 }
 
 .theme-toggle i{
-    padding: 5px 5px;
+    padding: 9px 5px;
     cursor: pointer;
+    font-size: 15px;
+}
+
+.theme-toggle i:hover {
+    opacity: .5;
 }
 
 .dark {
-    /* color: hsl(6, 63%, 50%); */
     color: red;
 }
 
@@ -226,12 +225,6 @@ small {
     color: hsl(176, 100%, 44%);
     
 }
-
-
-
-
-
-
 
 
 
@@ -263,6 +256,12 @@ small {
         margin: 0;
     }
 
+    .theme-toggle i{
+        padding: 8px 5px;
+        font-size: 10px;
+
+    }
+
    
 }
 
@@ -289,8 +288,9 @@ small {
     }
 
     .theme-toggle i{
-        padding: 5px 3px;
+        padding: 7px 4px;
         font-size: 10px;
+
     }
 
 }

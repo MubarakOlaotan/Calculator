@@ -1,4 +1,3 @@
-
 const display = document.getElementById('display')
 
 const buttons = Array.from(document.querySelectorAll('.button'))
@@ -36,7 +35,6 @@ buttons.map((button) => {
 const dark = document.querySelector('.dark')
 const light = document.querySelector('.light')
 const purple = document.querySelector('.purple')
-
 
 
 const darkTheme = () => {
