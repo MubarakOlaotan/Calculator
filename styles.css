@@ -1,6 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
 
+:root, html[data-theme = 'dark'] {
+    --body-background-color: hsl(222, 26%, 31%);
+    --body-color: white;
+    --display-background-color: hsl(224, 36%, 15%);
+    --display-box-shadow: 0px 0px 20px 1px rgb(18, 29, 56);
+    --buttons-background-color: hsl(224, 36%, 15%);
+    --buttons-box-shadow: 0px 0px 20px 1px rgb(23, 31, 56);
+    --button-border: .5px solid blue;
+    --button-background-color: hsl(30,25%, 89%);
+    --button-color: hsl(221, 14%, 31%);
+    --button-box-shadow: 0px 4px 0px hsl(27, 23%, 64%);
+    --button-hover-background-color: #17174d;
+    --equal-background-color: red;
+    --equal-box-shadow: 0px 4px 0px rgb(230, 81, 81);
+    --del-background-color: rgb(17, 17, 54);
+    --del-box-shadow: 0px 4px 0px rgb(45, 45, 75);
+    --theme-toggle-color: rgb(216, 59, 59);
+}
 
+
+html[data-theme = 'light'] {
+
+}
 
 
 
@@ -15,8 +37,8 @@
 
 
 body {
-    background-color: hsl(222, 26%, 31%);
-    color: white;
+    background-color: var(--body-background-color);
+    color: var(--body-color);
     font-family: 'League Spartan', sans-serif;
     font-weight: 700;  
     display: flex;
@@ -38,10 +60,10 @@ body {
     font-size: 54px;
     text-align: right;
     margin-bottom: 20px;
-    background-color: hsl(224, 36%, 15%);
+    background-color: var(--display-background-color);
     border-radius: 10px;
     font-weight: 600;
-    box-shadow: 0px 0px 20px 1px rgb(18, 29, 56);
+    box-shadow: var(--display-box-shadow);
     overflow: auto;
     transition: all .5s linear;
 }
