@@ -277,9 +277,9 @@ small {
     }
 
     #display {
-        height: 90px;
+        height: 80px;
         font-size: 38px;
-        padding-top: 15px;
+        padding-top: 10px;
     }
 
     .button {
