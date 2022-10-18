@@ -5,6 +5,7 @@
     --body-color: white;
     --display-background-color: hsl(224, 36%, 15%);
     --display-box-shadow: 0px 0px 20px 1px rgb(18, 29, 56);
+    --display-color: white;
     --buttons-background-color: hsl(224, 36%, 15%);
     --buttons-box-shadow: 0px 0px 20px 1px rgb(23, 31, 56);
     --button-border: .5px solid blue;
@@ -12,17 +13,60 @@
     --button-color: hsl(221, 14%, 31%);
     --button-box-shadow: 0px 4px 0px hsl(27, 23%, 64%);
     --button-hover-background-color: #17174d;
-    --equal-background-color: red;
-    --equal-box-shadow: 0px 4px 0px rgb(230, 81, 81);
-    --del-background-color: rgb(17, 17, 54);
-    --del-box-shadow: 0px 4px 0px rgb(45, 45, 75);
+    --button-hover-color: white;
+    --equal-background-color: hsl(6, 63%, 50%);
+    --equal-color: white;
+    --equal-box-shadow: rgb(230, 81, 81);
+    --del-background-color: hsl(225, 21%, 49%);
+    --del-color: white;
+    --del-box-shadow: 0px 4px 0px hsl(224, 28%, 35%);
+    --theme-toggle-background-color: hsl(224, 36%, 15%);
     --theme-toggle-color: rgb(216, 59, 59);
+    --reset-background-color: hsl(225, 21%, 49%);
+    --border: none;
 }
 
 
 html[data-theme = 'light'] {
-
+    --body-background-color: hsl(0, 0%, 90%);
+    --body-color: black;
+    --buttons-background-color: hsl(0, 5%, 81%);
+    --display-background-color: hsl(0, 0%, 93%);
+    --display-color: black;
+    --equal-background-color: hsl(25, 98%, 40%);
+    --equal-box-shadow:hsl(25, 99%, 27%);
+    --button-color: hsl(60, 10%, 19%);
+    --del-background-color: hsl(185, 42%, 37%);
+    --del-box-shadow: 0px 4px 0px hsl(185, 58%, 25%);
+    --reset-background-color: hsl(185, 42%, 37%);
+    --buttons-box-shadow: 0px 0px 0px;
+    --display-box-shadow: 0px 0px 10px 0px rgb(216, 210, 178);
+    --button-hover-background-color: hsl(185, 42%, 37%);
+    --theme-toggle-background-color: hsl(0, 5%, 81%);
 }
+
+html[data-theme = 'purple'] {
+    --body-color: hsl(52, 100%, 62%);
+    --body-background-color: hsl(268, 75%, 9%);
+    --button-background-color: hsl(268, 71%, 12%);
+    --display-background-color: hsl(268, 71%, 12%);
+    --display-color: hsl(52, 100%, 62%);
+    --del-background-color: hsl(281, 89%, 26%);
+    --reset-background-color: hsl(281, 89%, 26%);
+    --del-box-shadow: 0px 4px 0px hsl(285, 91%, 52%);
+    --button-color: hsl(52, 100%, 62%);
+    --button-background-color: hsl(268, 47%, 21%);
+    --button-box-shadow: 0px 4px 0px hsl(290, 70%, 36%);
+    --button-hover-background-color: hsl(267, 53%, 44%);
+    --equal-background-color: hsl(176, 100%, 44%);
+    --equal-box-shadow: hsl(177, 92%, 70%);
+    --buttons-background-color: hsl(268, 71%, 12%);
+    --buttons-box-shadow: 0px 0px 0px;
+    --display-box-shadow: 0px 0px 0px;
+    --theme-toggle-background: hsl(268, 71%, 12%);
+}
+
+
 
 
 
@@ -64,6 +108,7 @@ body {
     border-radius: 10px;
     font-weight: 600;
     box-shadow: var(--display-box-shadow);
+    color: var(--display-color);
     overflow: auto;
     transition: all .5s linear;
 }
@@ -71,42 +116,42 @@ body {
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background-color: hsl(224, 36%, 15%);
+    background-color: var(--buttons-background-color);
     padding: 30px 35px;
     border-radius: 10px;
-    box-shadow: 0px 0px 20px 1px rgb(23, 31, 56);
+    box-shadow: var(--buttons-box-shadow);
     width: 100%;
     gap: 28px 25px;
 }
 
 
 .button {
-    border: .5px solid blue;
+    border: var(--button-border);
     border-radius: 8px;
     /* padding: 10px 25px; */
     padding-top: 15px;
     text-align: center;
     font-size: 40px;
     cursor: pointer;
-    background-color: hsl(30, 25%, 89%);
-    color: hsl(221, 14%, 31%);
+    background-color: var(--button-background-color);
+    color: var(--button-color);
     margin: 5px;
     font-weight: 600;
     border: none;
     height: 60px;
-    box-shadow: 0px 4px 0px hsl(27, 23%, 64%);
+    box-shadow: var(--button-box-shadow);
 }
 
 .button:hover {
-    background-color: #17174d;
-    color: white;
+    background-color: var(--button-hover-background-color);
+    color: var(--button-hover-color);
     transition: 0.2s ease-in-out;
 }
 
 #equal {
-    background-color: red;
-    color: white;
-    box-shadow: 0px 4px 0px rgb(230, 81, 81); 
+    background-color: var(--equal-background-color);
+    color: var(--equal-color); 
+    box-shadow: 0px 4px 0px var(--equal-box-shadow);
 }
 
 #equal:hover {
@@ -115,14 +160,19 @@ body {
 }
 
 #del {
-    background-color: rgb(17, 17, 54);
-    color: white;
-    box-shadow: 0px 4px 0px rgb(45, 45, 75);
+    background-color: var(--del-background-color);
+    color: var(--del-color);
+    box-shadow: var(--del-box-shadow);
 }
 
 #del:hover {
     opacity: .6;
     transition: .2s ease-in-out;
+}
+
+.reset {
+    background-color: var(--reset-background-color);
+    box-shadow: var(--del-box-shadow);
 }
 
 
@@ -138,9 +188,6 @@ body {
     padding-left: 8px;
 }
 
-/* .toggle {
-    font-size: 50px;
-} */
 
 .theme-div {
     display: flex;
@@ -155,16 +202,29 @@ small {
 }
 
 .theme-toggle {
-    background-color: inherit;
-    border: 1px solid inherit;
+    border: 1px solid var(--border);
     border-radius: 15px;
-    background-color: hsl(224, 36%, 15%);
-    color: rgb(216, 59, 59);
+    background-color: var(--theme-toggle-background-color);
+    color: var(--theme-toggle-color);
 }
 
 .theme-toggle i{
     padding: 5px 5px;
     cursor: pointer;
+}
+
+.dark {
+    /* color: hsl(6, 63%, 50%); */
+    color: red;
+}
+
+.light {
+    color: hsl(25, 98%, 40%);
+}
+
+.purple {
+    color: hsl(176, 100%, 44%);
+    
 }
 
 

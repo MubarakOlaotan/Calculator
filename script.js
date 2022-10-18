@@ -9,7 +9,7 @@ buttons.map((button) => {
             case 'C':
                 display.innerText = ''
                 break;
-            case 'DEL':
+            case '⇚':
                 if (display.innerText) {
                     display.innerText = display.innerText.slice(0, -1)               }
                 break;
@@ -29,3 +29,31 @@ buttons.map((button) => {
     })
 })
 
+
+
+// Toggle Theme!!
+
+const dark = document.querySelector('.dark')
+const light = document.querySelector('.light')
+const purple = document.querySelector('.purple')
+
+
+
+const darkTheme = () => {
+    let currentTheme = document.documentElement.getAttribute('data-theme')
+    document.documentElement.setAttribute('data-theme', currentTheme === 'light' || currentTheme === 'purple' ? 'dark' : 'dark')
+}
+
+const lightTheme = () => {
+    let currentTheme = document.documentElement.getAttribute('data-theme')
+    document.documentElement.setAttribute('data-theme', currentTheme === 'dark' || currentTheme === 'purple' ? 'light' : 'light')
+}
+
+const purpleTheme = () => {
+    let currentTheme = document.documentElement.getAttribute('data-theme')
+    document.documentElement.setAttribute('data-theme', currentTheme === 'dark' || currentTheme === 'light' ? 'purple' : 'purple')
+}
+
+dark.addEventListener('click', darkTheme)
+light.addEventListener('click', lightTheme)
+purple.addEventListener('click', purpleTheme)
