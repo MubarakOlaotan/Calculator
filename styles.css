@@ -170,6 +170,7 @@ body {
 .reset {
     background-color: var(--reset-background-color);
     box-shadow: var(--del-box-shadow);
+    color: var(--del-color);
 }
 
 
